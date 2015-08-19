@@ -4,12 +4,22 @@
 /*
 -----------------------------------------------------------------------------------*/
 
- jQuery(document).ready(function($) {
+/*----------------------------------------------------*/
+/* Pre-Loader Settings
+------------------------------------------------------ */
 
+ $(window).load(function() {
+		$('body').addClass('loaded');
+});
+
+
+
+ jQuery(document).ready(function($) {
+ 	console.log("ready");
 /*----------------------------------------------------*/
 /* FitText Settings
 ------------------------------------------------------ */
-
+	
 		setTimeout(function() {
 		 $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
 	 }, 100);
