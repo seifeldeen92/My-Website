@@ -129,8 +129,8 @@ table {
 /*  1. Basic  ------------------------------------------------------- */
 
 *,
-*:before,
-*:after {
+*:not(#loader):before,
+*:not(#loader):after {
    -moz-box-sizing: border-box;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
