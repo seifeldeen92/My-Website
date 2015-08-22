@@ -22,7 +22,7 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-html { overflow: hidden; }
+html { overflow: hidden; height: 100%; }
 
 body { background: #0f0f0f; }
 

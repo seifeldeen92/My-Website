@@ -5,11 +5,36 @@
 -----------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------*/
-/* Pre-Loader Settings
+/* Pre-Loader and Custom scroll Settings
 ------------------------------------------------------ */
 
  $(window).load(function() {
 		$('body').addClass('loaded');
+		
+		setTimeout(function(){ 
+			$("#loader-wrapper").remove();
+			$("html").niceScroll({
+        cursorcolor: "#424242", // change cursor color in hex
+        cursoropacitymin: 0, // change opacity when cursor is inactive (scrollabar "hidden" state), range from 1 to 0
+        cursoropacitymax: 1, // change opacity when cursor is active (scrollabar "visible" state), range from 1 to 0
+        cursorwidth: "5px", // cursor width in pixel (you can also write "5px")
+        cursorborder: "none", // css definition for cursor border
+        cursorborderradius: "5px", // border radius in pixel for cursor
+        zindex: "auto", // change z-index for scrollbar div
+        scrollspeed: 50, // scrolling speed
+        mousescrollstep: 60, // scrolling speed with mouse wheel (pixel)
+        touchbehavior: true, // enable cursor-drag scrolling like touch devices in desktop computer
+        enablemousewheel: true, // nicescroll can manage mouse wheel events
+        enablekeyboard: true, // nicescroll can manage keyboard events
+        smoothscroll: true, // scroll with ease movement
+        sensitiverail: true, // click on rail make a scroll
+        cursorminheight: 32, // set the minimum cursor height (pixel)
+        preservenativescrolling: true, // you can scroll native scrollable areas with mouse, bubbling mouse wheel event
+        railoffset: false, // you can add offset top/left for rail position
+        bouncescroll: true, // (only hw accell) enable scroll bouncing at the end of content as mobile-like
+	    });
+		}, 1000);		
+
 });
 
 
@@ -48,9 +73,7 @@
 	
 	/* ---- particles.js config ---- */
 
-	particlesJS.load('particles-bg', 'js/particles.json', function() {
-  	console.log('callback - particles.js config loaded');
-	});
+	particlesJS.load('particles-bg', 'js/particles.json');
 
 /*----------------------------------------------------*/
 /* Highlight the current section in the navigation bar
