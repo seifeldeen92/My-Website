@@ -5,10 +5,9 @@
 -----------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------*/
-/* Pre-Loader and Custom scroll Settings
+/* PACE,Pre-Loader and Custom scroll Settings
 ------------------------------------------------------ */
-
- $(window).load(function() {
+	Pace.on('done', function(){
 		$('body').addClass('loaded');
 		
 		setTimeout(function(){ 
@@ -33,14 +32,11 @@
         railoffset: false, // you can add offset top/left for rail position
         bouncescroll: true, // (only hw accell) enable scroll bouncing at the end of content as mobile-like
 	    });
-		}, 1000);		
-
-});
-
+		}, 1100);	
+	});
 
 
  jQuery(document).ready(function($) {
- 	console.log("ready");
 /*----------------------------------------------------*/
 /* FitText Settings
 ------------------------------------------------------ */
